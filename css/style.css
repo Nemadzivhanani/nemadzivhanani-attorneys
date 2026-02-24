@@ -76,7 +76,7 @@ h1, h2, h3, h4 {
    ========================================= */
 .navbar {
     background-color: var(--bg-white);
-    padding: 0.8rem 0; /* Slightly tighter padding */
+    padding: 0.8rem 0;
     border-bottom: 1px solid #eaeaea;
 }
 .nav-container {
@@ -92,7 +92,6 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-/* New styles for image + text combo */
 .logo-link {
     display: flex;
     align-items: center;
@@ -101,7 +100,7 @@ h1, h2, h3, h4 {
 }
 
 .brand-logo {
-    max-height: 50px; /* Adjusted size */
+    max-height: 50px; 
     width: auto;
     display: block;
 }
@@ -298,6 +297,28 @@ h1, h2, h3, h4 {
 }
 .service-card p { font-size: 0.95rem; }
 
+/* Read More Link Styling */
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--navy-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.read-more i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+.read-more:hover {
+    color: var(--gold);
+}
+.read-more:hover i {
+    transform: translateX(5px); 
+}
+
 /* =========================================
    7. CONTACT SECTION
    ========================================= */
@@ -341,7 +362,7 @@ h1, h2, h3, h4 {
 .full-width { width: 100%; padding: 15px; font-size: 1rem; }
 
 /* =========================================
-   8. MOBILE RESPONSIVE (The "Un-Cluster" Fix)
+   8. MOBILE RESPONSIVE 
    ========================================= */
 @media (max-width: 900px) {
     /* 1. Header Fix: Logo+Text on left, Button on right */
@@ -349,26 +370,26 @@ h1, h2, h3, h4 {
     
     .nav-container {
         padding: 0 10px; 
-        gap: 10px; /* Small gap between logo area and button */
+        gap: 10px; 
     }
 
-    /* Aggressively shrink logo elements for mobile */
     .brand-logo {
-        max-height: 58px; /* Much smaller image */
+        max-height: 58px; 
     }
     .logo-link {
-        gap: 8px; /* Tighter gap between image and text */
+        gap: 8px; 
     }
     .brand-title {
-        font-size: 0.85rem; /* Tiny title font */
+        font-size: 0.85rem; 
         letter-spacing: 0;
+        white-space: nowrap;
+        line-height: 1.1;
     }
     .brand-subtitle {
-        font-size: 0.55rem; /* Micro subtitle font */
+        font-size: 0.55rem; 
         letter-spacing: 1px;
     }
 
-    /* Compact consultation button */
     .top-btn {
         display: inline-block; 
         padding: 8px 12px; 
@@ -379,11 +400,10 @@ h1, h2, h3, h4 {
     /* 2. Hero Fixes */
     .hero { padding: 4rem 5%; }
     
-    /* FORCE ONE LINE for established text */
     .force-oneline {
-        white-space: nowrap; /* Forces it to stay on one line */
-        font-size: 0.7rem; /* Smaller font to ensure it fits */
-        letter-spacing: 1px; /* Less spacing to save room */
+        white-space: nowrap; 
+        font-size: 0.7rem; 
+        letter-spacing: 1px; 
     }
 
     .hero h1 { font-size: 2.2rem; }
@@ -406,9 +426,38 @@ h1, h2, h3, h4 {
         object-fit: cover;
     }
 
-    .services-grid-2x2 { grid-template-columns: 1fr; gap: 1.5rem; }
-    .service-card { padding: 1.5rem; } 
+    /* Force Director name onto one line */
+    .director-name {
+        white-space: nowrap;
+        font-size: 1.6rem; 
+    }
 
+    /* 4. Practice Areas Fix (Forced 2x2 Mobile Grid) */
+    .services-grid-2x2 { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+    }
+    .service-card { 
+        padding: 15px 10px; 
+    } 
+    .icon-gold {
+        font-size: 1.3rem; 
+        margin-bottom: 0.5rem;
+    }
+    .service-card h3 {
+        font-size: 0.85rem; 
+        margin-bottom: 0.5rem;
+    }
+    .service-card p {
+        font-size: 0.7rem; 
+        line-height: 1.4;
+    }
+    .service-card .read-more {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+
+    /* 5. Contact Form Fix */
     .contact-form-card { padding: 1.5rem; }
     .address-block { 
         flex-direction: column; 
@@ -416,8 +465,3 @@ h1, h2, h3, h4 {
     }
     .address-block .icon-gold { margin-bottom: 5px; }
 }
-/* Force Director name onto one line */
-    .director-name {
-        white-space: nowrap;
-        font-size: 1.6rem; /* Shrinks the text slightly so the long name fits on phone screens */
-    }
