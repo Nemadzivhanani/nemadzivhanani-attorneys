@@ -416,3 +416,8 @@ h1, h2, h3, h4 {
     }
     .address-block .icon-gold { margin-bottom: 5px; }
 }
+/* Force Director name onto one line */
+    .director-name {
+        white-space: nowrap;
+        font-size: 1.6rem; /* Shrinks the text slightly so the long name fits on phone screens */
+    }
