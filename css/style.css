@@ -78,6 +78,10 @@ h1, h2, h3, h4 {
     background-color: var(--bg-white);
     padding: 0.8rem 0;
     border-bottom: 1px solid #eaeaea;
+    /* Added Sticky Header Rules Here */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
 }
 .nav-container {
     max-width: 1200px;
@@ -418,7 +422,26 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================
-   9. MOBILE RESPONSIVE 
+   9. SCROLL ANIMATIONS
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-grid-2x2 .service-card:nth-child(1) { transition-delay: 0s; }
+.services-grid-2x2 .service-card:nth-child(2) { transition-delay: 0.15s; }
+.services-grid-2x2 .service-card:nth-child(3) { transition-delay: 0.3s; }
+.services-grid-2x2 .service-card:nth-child(4) { transition-delay: 0.45s; }
+
+/* =========================================
+   10. MOBILE RESPONSIVE 
    ========================================= */
 @media (max-width: 900px) {
     /* Header Fix: Logo+Text on left, Button on right */
@@ -453,8 +476,14 @@ h1, h2, h3, h4 {
         white-space: nowrap; 
     }
 
-    /* Hero Fixes */
-    .hero { padding: 4rem 5%; }
+    /* Hero Fixes - FULL SCREEN VIEWPORT */
+    .hero { 
+        padding: 0 5%; 
+        min-height: calc(100vh - 70px); 
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
     
     .force-oneline {
         white-space: nowrap; 
