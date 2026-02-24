@@ -1,41 +1,44 @@
 document.addEventListener("DOMContentLoaded", function() {
     const noticeBoard = document.getElementById('notice-board');
 
-    // This is our local "API" array. You can easily add more announcements here later!
+    // Updated with concise, accurate requirements
     const announcements = [
         {
             type: "Hiring",
-            title: "Position: Legal Assistant",
-            description: "Nemadzivhanani R Inc is seeking a disciplined, career-focused Legal Assistant. The ideal candidate holds an LLB degree and has 1-2 years of practical experience in deceased estate administration.",
+            title: "Legal Assistant",
+            description: "Seeking a career-focused candidate with an LLB degree and 1-2 years of practical experience in deceased estate administration.",
+            requirements: "*Must submit: Detailed CV, Certified copies of ID & qualifications.",
             closingDate: "6 March 2026",
-            location: "Johannesburg & Roodepoort",
             applyEmail: "Fiona@nemadzivhananiattorneys.co.za"
         }
     ];
 
-    // Clear the "Loading..." text
     noticeBoard.innerHTML = '';
 
-    // Loop through the announcements and build the HTML card
     announcements.forEach(notice => {
+        // I tightened the padding and gaps to keep the card compact vertically
         const noticeHTML = `
-            <div class="announcement-card" style="display: flex; flex-direction: column; gap: 12px; animation: fadeUpCascade 0.5s ease forwards;">
+            <div class="announcement-card" style="display: flex; flex-direction: column; gap: 8px; animation: fadeUpCascade 0.5s ease forwards;">
                 
-                <span style="background: var(--gold); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; align-self: flex-start; text-transform: uppercase; letter-spacing: 1px;">
-                    <i class="fas fa-briefcase" style="margin-right: 5px;"></i> ${notice.type}
-                </span>
-                
-                <h4 style="color: var(--navy-dark); font-size: 1.3rem; margin: 0;">${notice.title}</h4>
-                
-                <p style="font-size: 0.95rem; color: var(--text-grey); line-height: 1.5; margin: 0;">${notice.description}</p>
-                
-                <div style="font-size: 0.85rem; color: var(--navy-dark); font-weight: 500; background: #f4f4f4; padding: 10px; border-left: 3px solid var(--gold);">
-                    <i class="fas fa-calendar-alt" style="color: var(--gold); margin-right: 5px;"></i> <strong>Closing Date:</strong> ${notice.closingDate}<br>
-                    <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 5px; margin-top: 8px;"></i> <strong>Location:</strong> ${notice.location}
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="background: var(--gold); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-briefcase" style="margin-right: 4px;"></i> ${notice.type}
+                    </span>
+                    <span style="font-size: 0.75rem; color: #e74c3c; font-weight: 600;">
+                        <i class="fas fa-clock" style="margin-right: 3px;"></i> Closes: ${notice.closingDate}
+                    </span>
                 </div>
                 
-                <a href="mailto:${notice.applyEmail}?subject=Application: Legal Assistant - [Your Name]" class="btn-outline" style="color: var(--navy-dark); border-color: var(--navy-dark); margin-top: 5px; align-self: flex-start; font-size: 0.85rem; padding: 8px 18px;">
-                    Email CV to Apply <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                <h4 style="color: var(--navy-dark); font-size: 1.15rem; margin: 4px 0 0 0;">${notice.title}</h4>
+                
+                <p style="font-size: 0.85rem; color: var(--text-grey); line-height: 1.4; margin: 0;">${notice.description}</p>
+                
+                <p style="font-size: 0.8rem; color: var(--navy-dark); font-weight: 600; margin: 0; padding: 4px 0 8px 0; border-bottom: 1px solid #eaeaea;">
+                    ${notice.requirements}
+                </p>
+                
+                <a href="mailto:${notice.applyEmail}?subject=Application: Legal Assistant - [Your Name]" class="btn-outline" style="color: var(--navy-dark); border-color: var(--navy-dark); align-self: flex-start; font-size: 0.8rem; padding: 6px 16px; margin-top: 4px;">
+                    Email Full Application <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
                 </a>
 
             </div>
