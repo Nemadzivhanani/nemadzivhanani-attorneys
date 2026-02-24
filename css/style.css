@@ -2,9 +2,9 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    --navy-dark: #12213b; /* Deep blue from your contact section */
+    --navy-dark: #12213b;
     --navy-light: #182b4a; 
-    --gold: #cca550; /* Refined gold from your buttons */
+    --gold: #cca550;
     --gold-hover: #b89345;
     --text-dark: #222222;
     --text-grey: #666666;
@@ -92,26 +92,19 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 15px;
 }
-.logo-icon {
-    font-size: 2rem;
-    color: var(--gold);
+
+/* 🚨 UPDATED: Image Logo Styling */
+.brand-logo {
+    max-height: 55px; /* Adjust this if you want it bigger on laptops */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
-.logo-text {
-    display: flex;
-    flex-direction: column;
+
+.brand-logo:hover {
+    transform: scale(1.02);
 }
-.logo-title {
-    font-family: var(--font-heading);
-    color: var(--navy-dark);
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
-.logo-subtitle {
-    font-size: 0.75rem;
-    color: var(--gold);
-    letter-spacing: 2px;
-}
+
 .nav-links a {
     text-decoration: none;
     color: var(--navy-dark);
@@ -126,7 +119,6 @@ h1, h2, h3, h4 {
    3. HERO SECTION
    ========================================= */
 .hero {
-    /* Set your dark background image here */
     background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.7)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80') center/cover;
     padding: 8rem 5%;
     text-align: center;
@@ -257,7 +249,7 @@ h1, h2, h3, h4 {
 
 .services-grid-2x2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* The magic that makes it 2x2 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 .service-card {
@@ -326,12 +318,61 @@ h1, h2, h3, h4 {
 .full-width { width: 100%; padding: 15px; font-size: 1rem; }
 
 /* =========================================
-   8. MOBILE RESPONSIVE
+   8. MOBILE RESPONSIVE (The "Un-Cluster" Fix)
    ========================================= */
 @media (max-width: 900px) {
+    /* 🚨 UPDATED: Header Fix for Logo + Button side-by-side */
     .nav-links { display: none; }
-    .split-layout { flex-direction: column; gap: 3rem; }
-    .services-grid-2x2 { grid-template-columns: 1fr; } /* Stacks the 4 cards on phones */
-    .hero h1 { font-size: 2.5rem; }
-    .stats-side { flex-direction: column; width: 100%; }
+    
+    .nav-container {
+        padding: 0 10px; 
+        gap: 10px; 
+    }
+
+    .brand-logo {
+        max-width: 200px; 
+        height: auto;
+    }
+
+    .navbar .btn-gold-solid {
+        display: inline-block; 
+        padding: 8px 12px; 
+        font-size: 0.75rem; 
+        white-space: nowrap; 
+    }
+
+    /* 2. Hero Fix: Stack buttons for thumb-tapping */
+    .hero { padding: 4rem 5%; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-buttons { 
+        flex-direction: column; 
+        gap: 15px; 
+        width: 100%; 
+    }
+    .hero-buttons a { width: 100%; text-align: center; }
+
+    /* 3. Global Spacing Fix: Add breathing room */
+    .split-layout { flex-direction: column; gap: 2.5rem; }
+    .stats-side { flex-direction: column; width: 100%; gap: 15px; } 
+    
+    /* 4. About Image Fix: Keep proportions */
+    .about-image { width: 100%; }
+    .about-image img { 
+        height: auto !important; 
+        width: 100%;
+        max-width: 100%; 
+        object-fit: cover;
+    }
+
+    /* 5. Practice Areas Fix */
+    .services-grid-2x2 { grid-template-columns: 1fr; gap: 1.5rem; }
+    .service-card { padding: 1.5rem; } 
+
+    /* 6. Contact Form Fix */
+    .contact-form-card { padding: 1.5rem; }
+    .address-block { 
+        flex-direction: column; 
+        gap: 5px; 
+    }
+    .address-block .icon-gold { margin-bottom: 5px; }
 }
