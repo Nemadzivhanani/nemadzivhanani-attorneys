@@ -76,7 +76,7 @@ h1, h2, h3, h4 {
    ========================================= */
 .navbar {
     background-color: var(--bg-white);
-    padding: 1rem 0;
+    padding: 0.8rem 0; /* Slightly tighter padding */
     border-bottom: 1px solid #eaeaea;
 }
 .nav-container {
@@ -90,19 +90,42 @@ h1, h2, h3, h4 {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
-/* 🚨 UPDATED: Image Logo Styling */
+/* New styles for image + text combo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
 .brand-logo {
-    max-height: 55px; /* Adjust this if you want it bigger on laptops */
+    max-height: 50px; /* Adjusted size */
     width: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
 
-.brand-logo:hover {
-    transform: scale(1.02);
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    color: var(--navy-dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .nav-links a {
@@ -321,28 +344,48 @@ h1, h2, h3, h4 {
    8. MOBILE RESPONSIVE (The "Un-Cluster" Fix)
    ========================================= */
 @media (max-width: 900px) {
-    /* 🚨 UPDATED: Header Fix for Logo + Button side-by-side */
+    /* 1. Header Fix: Logo+Text on left, Button on right */
     .nav-links { display: none; }
     
     .nav-container {
         padding: 0 10px; 
-        gap: 10px; 
+        gap: 10px; /* Small gap between logo area and button */
     }
 
+    /* Aggressively shrink logo elements for mobile */
     .brand-logo {
-        max-width: 200px; 
-        height: auto;
+        max-height: 32px; /* Much smaller image */
+    }
+    .logo-link {
+        gap: 8px; /* Tighter gap between image and text */
+    }
+    .brand-title {
+        font-size: 0.75rem; /* Tiny title font */
+        letter-spacing: 0;
+    }
+    .brand-subtitle {
+        font-size: 0.5rem; /* Micro subtitle font */
+        letter-spacing: 1px;
     }
 
-    .navbar .btn-gold-solid {
+    /* Compact consultation button */
+    .top-btn {
         display: inline-block; 
-        padding: 8px 12px; 
-        font-size: 0.75rem; 
+        padding: 8px 10px; 
+        font-size: 0.7rem; 
         white-space: nowrap; 
     }
 
-    /* 2. Hero Fix: Stack buttons for thumb-tapping */
+    /* 2. Hero Fixes */
     .hero { padding: 4rem 5%; }
+    
+    /* FORCE ONE LINE for established text */
+    .force-oneline {
+        white-space: nowrap; /* Forces it to stay on one line */
+        font-size: 0.7rem; /* Smaller font to ensure it fits */
+        letter-spacing: 1px; /* Less spacing to save room */
+    }
+
     .hero h1 { font-size: 2.2rem; }
     .hero-buttons { 
         flex-direction: column; 
@@ -351,11 +394,10 @@ h1, h2, h3, h4 {
     }
     .hero-buttons a { width: 100%; text-align: center; }
 
-    /* 3. Global Spacing Fix: Add breathing room */
+    /* 3. Global Spacing & Layout Fixes */
     .split-layout { flex-direction: column; gap: 2.5rem; }
     .stats-side { flex-direction: column; width: 100%; gap: 15px; } 
     
-    /* 4. About Image Fix: Keep proportions */
     .about-image { width: 100%; }
     .about-image img { 
         height: auto !important; 
@@ -364,11 +406,9 @@ h1, h2, h3, h4 {
         object-fit: cover;
     }
 
-    /* 5. Practice Areas Fix */
     .services-grid-2x2 { grid-template-columns: 1fr; gap: 1.5rem; }
     .service-card { padding: 1.5rem; } 
 
-    /* 6. Contact Form Fix */
     .contact-form-card { padding: 1.5rem; }
     .address-block { 
         flex-direction: column; 
