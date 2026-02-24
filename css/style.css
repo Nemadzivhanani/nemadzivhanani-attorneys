@@ -142,7 +142,7 @@ h1, h2, h3, h4 {
    ========================================= */
 .hero {
     /* UPDATED: Points to your local image folder for law-hero.jpg */
-    background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.8)), url('../images/law-hero.png') center/cover;
+    background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.8)), url('../images/law-hero.jpg') center/cover;
     padding: 8rem 5%;
     text-align: center;
     color: var(--bg-white);
