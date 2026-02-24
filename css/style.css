@@ -543,6 +543,53 @@ h1, h2, h3, h4 {
 .map-contact-link:hover { color: var(--gold); }
 
 /* =========================================
+   12. DETAILED PRACTICE AREAS
+   ========================================= */
+.practice-row {
+    padding: 6rem 0;
+}
+.practice-row.bg-light {
+    background-color: var(--bg-light);
+}
+.align-center {
+    align-items: center;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.practice-image {
+    flex: 1;
+}
+.practice-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--gold);
+}
+.practice-content {
+    flex: 1.2;
+}
+.practice-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.practice-list li {
+    margin-bottom: 0.8rem;
+    color: var(--navy-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.practice-list li i {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+/* =========================================
    11. MOBILE RESPONSIVE 
    ========================================= */
 @media (max-width: 900px) {
@@ -640,3 +687,8 @@ h1, h2, h3, h4 {
     .locations-grid { grid-template-columns: 1fr; gap: 2rem; }
     .inner-hero h1 { font-size: 2.2rem; }
 }
+
+/* Practice Areas Detailed Rows Mobile Fix */
+    .practice-row { padding: 4rem 0; }
+    .row-reverse { flex-direction: column; }
+    .practice-image img { height: 300px; margin-bottom: 2rem; }
