@@ -141,7 +141,6 @@ h1, h2, h3, h4 {
    3. HERO SECTION
    ========================================= */
 .hero {
-    /* UPDATED: Points to your local image folder for law-hero.jpg */
     background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.8)), url('../images/law-hero.jpg') center/cover;
     padding: 8rem 5%;
     text-align: center;
@@ -363,10 +362,66 @@ h1, h2, h3, h4 {
 .full-width { width: 100%; padding: 15px; font-size: 1rem; }
 
 /* =========================================
-   8. MOBILE RESPONSIVE 
+   8. FOOTER
+   ========================================= */
+.site-footer {
+    background-color: var(--navy-dark);
+    color: #a1aab8;
+    padding: 5rem 0 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px; 
+}
+
+.footer-col h4 {
+    color: var(--bg-white);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: #a1aab8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   9. MOBILE RESPONSIVE 
    ========================================= */
 @media (max-width: 900px) {
-    /* 1. Header Fix: Logo+Text on left, Button on right */
+    /* Header Fix: Logo+Text on left, Button on right */
     .nav-links { display: none; }
     
     .nav-container {
@@ -398,7 +453,7 @@ h1, h2, h3, h4 {
         white-space: nowrap; 
     }
 
-    /* 2. Hero Fixes */
+    /* Hero Fixes */
     .hero { padding: 4rem 5%; }
     
     .force-oneline {
@@ -415,7 +470,7 @@ h1, h2, h3, h4 {
     }
     .hero-buttons a { width: 100%; text-align: center; }
 
-    /* 3. Global Spacing & Layout Fixes */
+    /* Global Spacing & Layout Fixes */
     .split-layout { flex-direction: column; gap: 2.5rem; }
     .stats-side { flex-direction: column; width: 100%; gap: 15px; } 
     
@@ -433,7 +488,7 @@ h1, h2, h3, h4 {
         font-size: 1.6rem; 
     }
 
-    /* 4. Practice Areas Fix (Forced 2x2 Mobile Grid) */
+    /* Practice Areas Fix (Forced 2x2 Mobile Grid) */
     .services-grid-2x2 { 
         grid-template-columns: repeat(2, 1fr); 
         gap: 10px; 
@@ -458,7 +513,7 @@ h1, h2, h3, h4 {
         margin-top: 0.5rem;
     }
 
-    /* 5. Contact Form Fix */
+    /* Contact Form Fix */
     .contact-form-card { padding: 1.5rem; }
     .address-block { 
         flex-direction: column; 
