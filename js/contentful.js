@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const noticeBoard = document.getElementById('notice-board');
 
-    // Updated with concise, accurate requirements
+    // Hardcoded JSON "API" for easy updates
     const announcements = [
         {
             type: "Hiring",
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     noticeBoard.innerHTML = '';
 
     announcements.forEach(notice => {
-        // I tightened the padding and gaps to keep the card compact vertically
         const noticeHTML = `
             <div class="announcement-card" style="display: flex; flex-direction: column; gap: 8px; animation: fadeUpCascade 0.5s ease forwards;">
                 
