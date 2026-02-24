@@ -141,7 +141,8 @@ h1, h2, h3, h4 {
    3. HERO SECTION
    ========================================= */
 .hero {
-    background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.7)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80') center/cover;
+    /* UPDATED: Points to your local image folder for law-hero.png */
+    background: linear-gradient(to right, rgba(18, 33, 59, 0.9), rgba(18, 33, 59, 0.8)), url('../images/law-hero.png') center/cover;
     padding: 8rem 5%;
     text-align: center;
     color: var(--bg-white);
