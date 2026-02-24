@@ -590,6 +590,37 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================
+   13. ABOUT PAGE & CORE VALUES
+   ========================================= */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.value-card {
+    background: var(--bg-white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-top: 3px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--navy-dark);
+    margin-bottom: 1.5rem;
+}
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
    11. MOBILE RESPONSIVE 
    ========================================= */
 @media (max-width: 900px) {
@@ -692,3 +723,6 @@ h1, h2, h3, h4 {
     .practice-row { padding: 4rem 0; }
     .row-reverse { flex-direction: column; }
     .practice-image img { height: 300px; margin-bottom: 2rem; }
+
+    /* About Page Core Values Mobile Fix */
+    .values-grid { grid-template-columns: 1fr; gap: 20px; }
