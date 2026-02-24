@@ -354,17 +354,17 @@ h1, h2, h3, h4 {
 
     /* Aggressively shrink logo elements for mobile */
     .brand-logo {
-        max-height: 48px; /* Much smaller image */
+        max-height: 58px; /* Much smaller image */
     }
     .logo-link {
-        gap: 10px; /* Tighter gap between image and text */
+        gap: 8px; /* Tighter gap between image and text */
     }
     .brand-title {
-        font-size: 0.9rem; /* Tiny title font */
+        font-size: 0.85rem; /* Tiny title font */
         letter-spacing: 0;
     }
     .brand-subtitle {
-        font-size: 0.6rem; /* Micro subtitle font */
+        font-size: 0.55rem; /* Micro subtitle font */
         letter-spacing: 1px;
     }
 
