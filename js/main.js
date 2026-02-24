@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 2. NAVBAR SCROLL EFFECT (The Glass Shadow)
+    // 2. NAVBAR SCROLL EFFECT
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 3. SCROLL REVEAL ANIMATIONS
     const reveals = document.querySelectorAll(".reveal");
-    
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px" 
