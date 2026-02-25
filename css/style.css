@@ -271,22 +271,20 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
 .address-text { font-size: 1rem; color: var(--text-grey); margin-bottom: 1.5rem; line-height: 1.5; }
 .address-text .icon-gold { margin-right: 8px; font-size: 1.1rem; }
 .map-contact-link {
-    display: flex; /* Keeps the icon and text perfectly side-by-side */
-    align-items: flex-start;
+    display: flex;
+    align-items: center; /* Keeps the icon perfectly centered with the text */
     color: var(--navy-dark);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
-    word-break: break-word; /* THE MAGIC LINE: Allows long emails to drop to the next line */
 }
 .map-contact-link i {
     color: var(--gold);
     margin-right: 10px;
-    min-width: 15px; /* Stops the icon from shrinking */
+    min-width: 15px;
     text-align: center;
-    margin-top: 5px; /* Perfectly aligns the icon with the first line of text */
 }
 .map-contact-link:hover { color: var(--gold); }
 
@@ -386,9 +384,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
     .locations-grid { grid-template-columns: 1fr; gap: 2rem; }
     .inner-hero h1 { font-size: 2.2rem; }
     
-    /* Shrink the contact links on narrow screens */
+    /* Shrink the contact links on narrow screens so they fit on 1 line */
     .map-contact-link {
-        font-size: 0.85rem; 
+        font-size: 0.75rem; /* Small enough to fit 38 characters */
+        white-space: nowrap; /* Strictly forces it to stay on a single line */
+    }
+    .map-contact-link i {
+        font-size: 0.9rem; /* Keeps the icon slightly larger than the text */
+        margin-right: 6px;
     }
 
     /* PRACTICE AREAS DETAILED ROWS MOBILE FIX */
