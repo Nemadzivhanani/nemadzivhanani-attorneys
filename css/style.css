@@ -376,9 +376,22 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
     .practice-image img { height: 300px; margin-bottom: 2rem; }
 
     /* ABOUT PAGE MOBILE FIXES */
-    .director-header { display: flex; flex-direction: row; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .director-title { font-size: 0.75rem; white-space: nowrap; }
-    .director-name { font-size: 1.6rem; margin: 0; }
+   /* ABOUT PAGE MOBILE FIXES */
+    .director-header { 
+        display: flex; 
+        flex-direction: column; /* Stacks the title neatly above the name */
+        align-items: flex-start; 
+        gap: 5px; 
+    }
+    .director-title { 
+        font-size: 0.75rem; 
+        white-space: nowrap; 
+    }
+    .director-name { 
+        font-size: 1.45rem; /* Scaled down just a fraction so it perfectly fits */
+        margin: 0; 
+        white-space: nowrap !important; /* Strictly forces "R." and "Nemadzivhanani" to stay together */
+    }
     
     .about-buttons { flex-direction: row; gap: 10px; width: 100%; }
     .about-buttons .btn-gold-solid, .about-buttons .btn-outline { flex: 1; text-align: center; padding: 12px 5px; font-size: 0.8rem; white-space: nowrap; }
