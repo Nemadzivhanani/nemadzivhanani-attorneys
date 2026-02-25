@@ -292,15 +292,30 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
    12. ABOUT PAGE & CORE VALUES
    ========================================= */
 .director-title { color: var(--gold); font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; text-transform: uppercase; }
-.director-name { font-size: 2.8rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.director-name { font-size: 2.4rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
 .about-buttons { display: flex; gap: 15px; }
 
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .value-card { background: var(--bg-white); padding: 3rem 2rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-top: 3px solid var(--gold); transition: transform 0.3s ease; }
 .value-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
-.value-header { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 1rem; }
-.value-card i { font-size: 2rem; color: var(--navy-dark); }
-.value-header h3 { margin-bottom: 0; font-size: 1.3rem; }
+.value-header {
+    display: flex;
+    flex-direction: column; /* THIS FIXES IT: Stacks the icon on top of the text */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.2rem;
+}
+.value-card i {
+    font-size: 2.5rem; /* Made the icon slightly bigger to look premium when stacked */
+    color: var(--navy-dark);
+    margin: 0; 
+}
+.value-header h3 {
+    margin-bottom: 0;
+    font-size: 1.15rem;
+    white-space: nowrap; /* Forces the text onto 1 line */
+}
 
 /* =========================================
    13. MOBILE RESPONSIVE 
