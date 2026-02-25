@@ -94,7 +94,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
 
 .logo-area { display: flex; align-items: center; }
 .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand-logo { max-height: 50px; width: auto; display: block; }
+.brand-logo { max-height: 80px; width: auto; display: block; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-title { font-family: var(--font-heading); color: var(--navy-dark); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
 .brand-subtitle { font-size: 0.7rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
@@ -270,8 +270,24 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
 .location-details h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 .address-text { font-size: 1rem; color: var(--text-grey); margin-bottom: 1.5rem; line-height: 1.5; }
 .address-text .icon-gold { margin-right: 8px; font-size: 1.1rem; }
-.map-contact-link { display: block; color: var(--navy-dark); text-decoration: none; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.8rem; transition: color 0.3s ease; }
-.map-contact-link i { color: var(--gold); margin-right: 10px; width: 15px; text-align: center; }
+.map-contact-link {
+    display: flex; /* Keeps the icon and text perfectly side-by-side */
+    align-items: flex-start;
+    color: var(--navy-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+    word-break: break-word; /* THE MAGIC LINE: Allows long emails to drop to the next line */
+}
+.map-contact-link i {
+    color: var(--gold);
+    margin-right: 10px;
+    min-width: 15px; /* Stops the icon from shrinking */
+    text-align: center;
+    margin-top: 5px; /* Perfectly aligns the icon with the first line of text */
+}
 .map-contact-link:hover { color: var(--gold); }
 
 /* =========================================
@@ -366,9 +382,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--navy-dark); font
     .address-block { flex-direction: column; gap: 5px; }
     .address-block .icon-gold { margin-bottom: 5px; }
 
-    /* INNER PAGES & MAPS MOBILE FIX */
+  /* INNER PAGES & MAPS MOBILE FIX */
     .locations-grid { grid-template-columns: 1fr; gap: 2rem; }
     .inner-hero h1 { font-size: 2.2rem; }
+    
+    /* Shrink the contact links on narrow screens */
+    .map-contact-link {
+        font-size: 0.85rem; 
+    }
 
     /* PRACTICE AREAS DETAILED ROWS MOBILE FIX */
     .practice-row { padding: 4rem 0; }
