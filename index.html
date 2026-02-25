@@ -179,16 +179,25 @@
             
             <div class="contact-form-card">
                 <h3>Request A Call Back</h3>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <select>
-                        <option>Deceased Estates</option>
-                        <option>RAF Claims</option>
-                        <option>Labour Law</option>
-                        <option>Unlawful Arrest</option>
-                        <option>General Inquiry</option>
+                <form action="YOUR_BACKEND_URL" method="POST">
+                    <input type="text" name="Client_Name" placeholder="Your Name" required>
+                    <input type="tel" name="Client_Phone" placeholder="Phone Number" required>
+                    
+                    <select name="Legal_Service" required>
+                        <option value="" disabled selected>Select Legal Service...</option>
+                        <option value="Deceased Estates">Deceased Estates</option>
+                        <option value="RAF Claims">RAF Claims</option>
+                        <option value="Labour Law">Labour Law</option>
+                        <option value="Unlawful Arrest">Unlawful Arrest</option>
+                        <option value="General Inquiry">General Inquiry</option>
                     </select>
+                    
+                    <select name="Preferred_Branch" required>
+                        <option value="" disabled selected>Preferred Branch...</option>
+                        <option value="Johannesburg">Johannesburg Chambers</option>
+                        <option value="Roodepoort">Roodepoort Branch</option>
+                    </select>
+
                     <button type="submit" class="btn-gold-solid full-width">Submit Request</button>
                 </form>
             </div>

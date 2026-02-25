@@ -48,4 +48,53 @@ document.addEventListener("DOMContentLoaded", function() {
     reveals.forEach(reveal => {
         revealOnScroll.observe(reveal);
     });
+
+    // 4. LIVE CONTACT FORM HANDLING (Connects to mailer.php)
+    const contactForms = document.querySelectorAll('.contact-form-card form');
+    
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop the page refresh
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending..."; // Let the user know it's working
+            
+            // Package the form data
+            const formData = new FormData(form);
+            
+            // Send it to the PHP script secretly in the background
+            fetch('mailer.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success! Turn button green
+                    btn.innerText = "Request Sent ✓";
+                    btn.style.backgroundColor = "#27ae60"; 
+                    btn.style.color = "#ffffff";
+                    form.reset(); // Clear the form
+                } else {
+                    // Server Error
+                    btn.innerText = "Error! Try Again.";
+                    btn.style.backgroundColor = "#e74c3c"; // Red for error
+                    btn.style.color = "#ffffff";
+                }
+                
+                // Reset button after 4 seconds
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = ""; 
+                }, 4000);
+            })
+            .catch(error => {
+                // Connection Error
+                btn.innerText = "Network Error.";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 4000);
+            });
+        });
+    });
 });
