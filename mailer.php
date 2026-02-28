@@ -15,14 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // THE MAGIC: Route to the correct receptionist based on the dropdown
-    if ($branch == "Johannesburg") {
-        $recipient = "jhb@nemadzivhananiattorney.co.za";
-    } else if ($branch == "Roodepoort") {
-        $recipient = "roodepoort@nemadzivhananiattorney.co.za";
-    } else {
-        $recipient = "info@nemadzivhananiattorney.co.za"; // Fallback safety
-    }
+    // ALL EMAILS GO TO INFO NOW
+    $recipient = "info@nemadzivhananiattorneys.co.za";
 
     // Build the email
     $subject = "New Website Lead: $service - $branch";
@@ -34,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Preferred Branch: $branch\n";
 
     // Set the sender (must be your domain to prevent going to spam)
-    $email_headers = "From: website@nemadzivhananiattorney.co.za";
+    $email_headers = "From: website@nemadzivhananiattorneys.co.za";
 
     // Send the email
     if (mail($recipient, $subject, $email_content, $email_headers)) {
