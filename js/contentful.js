@@ -9,13 +9,23 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "Seeking a career-focused candidate with an LLB degree and 1-2 years of practical experience in deceased estate administration.",
             requirements: "*Must submit: Detailed CV, Certified copies of ID & qualifications.",
             closingDate: "6 March 2026",
+            closesOn: "2026-03-06", // ads hide themselves after this date
             applyEmail: "Fiona@nemadzivhananiattorneys.co.za"
         }
     ];
 
+    // Only show notices whose closing date has not passed; hide the whole section when none are left.
+    const today = new Date().toISOString().slice(0, 10);
+    const current = announcements.filter(n => !n.closesOn || n.closesOn >= today);
+    if (current.length === 0) {
+        const section = noticeBoard.closest('.notice-board-section');
+        if (section) section.style.display = 'none';
+        return;
+    }
+
     noticeBoard.innerHTML = '';
 
-    announcements.forEach(notice => {
+    current.forEach(notice => {
         const noticeHTML = `
             <div class="announcement-card" style="display: flex; flex-direction: column; gap: 8px; animation: fadeUpCascade 0.5s ease forwards;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
