@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtaBand, OfficeCards, PrimaryCtas, TeamGrid, TrustSection } from "@/components/Sections";
-import { offices, services, team, whyChooseUs } from "@/lib/site";
+import { established, offices, services, team, whyChooseUs } from "@/lib/site";
 
 export default function Home() {
   const lead = services[0];
@@ -92,7 +92,7 @@ export default function Home() {
               <div className="tile"><b>{offices.length}</b><span>Offices in Gauteng</span></div>
               <div className="tile"><b>{services.length}</b><span>Practice areas</span></div>
               <div className="tile"><b>{team.length}</b><span>People on our team</span></div>
-              <div className="tile"><b>1</b><span>Director accountable for every file</span></div>
+              <div className="tile"><b>{established}</b><span>In practice since</span></div>
             </div>
           </div>
         </div>

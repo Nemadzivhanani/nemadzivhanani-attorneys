@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { fidelityNote, firm, mapLink, offices, registration, team, waLink } from "@/lib/site";
+import { fidelityNote, firm, mapLink, officeHours, offices, registration, team, waLink } from "@/lib/site";
 import { WaIcon } from "./WhatsAppFloat";
 
 export function PrimaryCtas({ message = "Good day, I would like to speak to an attorney.", whatsappLabel = "WhatsApp an attorney" }: { message?: string; whatsappLabel?: string }) {
@@ -46,6 +46,19 @@ export function TrustSection({ heading = "Registered, regulated and accountable"
   );
 }
 
+export function OfficeHours() {
+  return (
+    <dl className="hours">
+      {officeHours.map((h) => (
+        <div key={h.days}>
+          <dt>{h.days}</dt>
+          <dd>{h.time}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 export function OfficeCards() {
   return (
     <div className="grid grid-3">
@@ -62,6 +75,7 @@ export function OfficeCards() {
             ))}
           </address>
           <p className="muted" style={{ fontSize: ".92rem" }}>{o.about}</p>
+          <OfficeHours />
           <div className="row">
             <a className="btn btn-solid" href={`tel:${o.phone}`} aria-label={`Call the ${o.name} on ${o.phoneDisplay}`}>
               {o.phoneDisplay} <span className="arrow" aria-hidden="true">☏</span>

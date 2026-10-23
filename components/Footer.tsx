@@ -25,6 +25,7 @@ export default function Footer() {
                   <a href={`tel:${o.phone}`}>☏ {o.phoneDisplay}</a> <span className="legal">({o.name.replace(" office", "")})</span>
                 </li>
               ))}
+              <li className="legal">Mon to Thu 08:00 to 16:00 · Fri 08:00 to 15:00 · Closed weekends and public holidays</li>
               <li>
                 <a href={`mailto:${firm.email}`}>✉ {firm.email}</a>
               </li>

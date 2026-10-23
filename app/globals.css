@@ -247,3 +247,9 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 }
 
 @media (min-width: 1080px) { .group-photo { aspect-ratio: auto; height: 560px; } .group-photo img { object-position: center 30%; } }
+
+/* office hours */
+.hours { margin-top: 10px; border-top: 1px solid #e3dfcf; padding-top: 10px; font-size: .9rem; display: grid; gap: 4px; }
+.hours div { display: flex; justify-content: space-between; gap: 10px; }
+.hours dt { color: var(--muted); }
+.hours dd { font-weight: 700; white-space: nowrap; }

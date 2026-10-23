@@ -25,6 +25,14 @@ export const registration = [
 export const fidelityNote =
   "Protection of trust money is subject to the provisions, requirements and limits of the Legal Practice Act and the Legal Practitioners' Fidelity Fund.";
 
+export const officeHours = [
+  { days: "Monday to Thursday", time: "08:00 to 16:00" },
+  { days: "Friday", time: "08:00 to 15:00" },
+  { days: "Saturday, Sunday and public holidays", time: "Closed" },
+];
+
+export const established = "2023";
+
 export type Office = {
   id: string;
   name: string;
