@@ -61,7 +61,10 @@ export default function Footer() {
             {firm.registeredName}, trading as {firm.name}, is a firm of attorneys registered with the Legal Practice Council
             (firm no. 71228). Company reg. 2023/160558/21 · Fidelity Fund Certificate FFC16209/2026 · Information Regulator reg.
             2026-063481.
-            <br />© 2026 {firm.short} All rights reserved. Website by Nemadzivhanani IT Solutions.
+            <br />© 2026 {firm.short} All rights reserved.{" "}
+            <a href="https://nemadzivhananiit.co.za" target="_blank" rel="noopener noreferrer">
+              Website by Nemadzivhanani IT Solutions
+            </a>
           </p>
         </div>
       </div>
