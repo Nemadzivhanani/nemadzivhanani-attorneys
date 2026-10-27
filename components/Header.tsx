@@ -8,6 +8,7 @@ const links = [
   { href: "/practice-areas", label: "Practice areas" },
   { href: "/practice-areas/deceased-estates", label: "Lost a loved one" },
   { href: "/about", label: "About" },
+  { href: "/the-firm", label: "Inside the firm" },
   { href: "/team", label: "Our team" },
   { href: "/contact", label: "Contact" },
 ];

@@ -46,8 +46,8 @@ export default async function ServicePage(props: PageProps<"/practice-areas/[slu
       </section>
 
       {s.image && (
-        <div style={{ position: "relative", height: 260 }}>
-          <Image src={s.image} alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
+        <div className="photo-band">
+          <Image src={s.image} alt="" fill sizes="100vw" />
         </div>
       )}
 

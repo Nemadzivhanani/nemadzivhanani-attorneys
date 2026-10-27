@@ -29,7 +29,7 @@ export default function About() {
       <section className="sec white">
         <div className="wrap split">
           <div style={{ position: "relative", minHeight: 420 }}>
-            <Image src={director.photo} alt={`${director.name}, ${director.role}`} fill sizes="(min-width: 760px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: "top" }} />
+            <Image src="/images/firm/director-logo.jpg" alt={`${director.name}, ${director.role}, at the firm's reception`} fill sizes="(min-width: 760px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 20%" }} />
           </div>
           <div>
             <div className="lbl">Founder &amp; Director</div>
@@ -42,6 +42,9 @@ export default function About() {
             </p>
             <Link className="btn btn-line" href="/team">
               Meet the whole team <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+            <Link className="btn btn-line" href="/the-firm">
+              See inside our office <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

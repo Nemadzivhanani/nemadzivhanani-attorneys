@@ -34,6 +34,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="photo-band">
+        <Image src="/team/team-group.jpg" alt="Director Rabelani Nemadzivhanani with the Nemadzivhanani R Inc team" fill sizes="100vw" priority />
+      </div>
+
       {/* Why us */}
       <section className="sec">
         <div className="wrap">
@@ -53,7 +57,7 @@ export default function Home() {
               </Link>
             </div>
             <div style={{ position: "relative", minHeight: 260 }}>
-              <Image src="/team/team-group.jpg" alt="The Nemadzivhanani R Inc team" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover" }} />
+              <Image src="/images/firm/director-logo.jpg" alt="Director Rabelani Nemadzivhanani at the firm's reception" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 25%" }} />
             </div>
             <div className="deep" style={{ padding: "24px 20px" }}>
               <div className="lbl" style={{ color: "var(--gold)" }}>Already a client?</div>
@@ -145,6 +149,9 @@ export default function Home() {
           <TeamGrid limit={3} />
           <Link className="btn btn-line inline" href="/team" style={{ marginTop: 18 }}>
             Meet the whole team <span className="arrow" aria-hidden="true">→</span>
+          </Link>{" "}
+          <Link className="btn btn-line inline" href="/the-firm" style={{ marginTop: 18 }}>
+            See inside our office <span className="arrow" aria-hidden="true">→</span>
           </Link>
         </div>
       </section>

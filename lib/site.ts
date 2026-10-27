@@ -94,6 +94,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "deceased-estates",
+    image: "/images/firm/consultation.jpg",
     title: "Deceased estates & fiduciary services",
     short: "Deceased estates",
     label: "Fiduciary services",
@@ -118,11 +119,11 @@ export const services: Service[] = [
       { title: "We settle the debts", text: "Creditors' claims are checked and paid, and assets are valued or sold if needed." },
       { title: "We pay the heirs", text: "Once the L&D Account is approved, we pay out to the heirs and close the file with the Master." },
     ],
-    image: "/images/deceased-estates.jpg",
     lead: true,
   },
   {
     slug: "litigation",
+    image: "/images/firm/director-standing.jpg",
     title: "Civil & commercial litigation",
     short: "Civil & commercial litigation",
     label: "Litigation",
@@ -147,6 +148,7 @@ export const services: Service[] = [
   },
   {
     slug: "corporate-commercial",
+    image: "/images/firm/boardroom.jpg",
     title: "Corporate & commercial law",
     short: "Corporate & commercial law",
     label: "Corporate & commercial",
@@ -170,6 +172,7 @@ export const services: Service[] = [
   },
   {
     slug: "family-law",
+    image: "/images/firm/director-consult.jpg",
     title: "Family & matrimonial law",
     short: "Family & matrimonial law",
     label: "Family law",
@@ -193,6 +196,7 @@ export const services: Service[] = [
   },
   {
     slug: "property-general",
+    image: "/images/firm/desk-wide.jpg",
     title: "Property law & general practice",
     short: "Property & general practice",
     label: "Property & general",
@@ -307,3 +311,24 @@ export function waLink(message: string) {
 export function mapLink(query: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
+
+// Photos from the firm's 2026 photoshoot (public/images/firm), used on the "Inside the firm" page.
+export type Photo = { src: string; alt: string; caption: string; tall?: boolean };
+
+export const officePhotos: Photo[] = [
+  { src: "/images/firm/logo-wall.jpg", alt: "The firm's logo on the reception wall", caption: "Equal Justice For All: the words on our wall, and the way we work.", tall: true },
+  { src: "/images/firm/reception-thandiwe.jpg", alt: "Candidate attorney Thandiwe Khumalo at reception", caption: "Reception, where every visit starts." },
+  { src: "/images/firm/boardroom.jpg", alt: "The team in a meeting around the boardroom table", caption: "Matters are discussed as a team, with the Director at the table." },
+  { src: "/images/firm/glass-door.jpg", alt: "Glass office door with the firm's logo", caption: "Private consultation rooms for confidential conversations.", tall: true },
+  { src: "/images/firm/consultation.jpg", alt: "Two team members in a consultation with documents and a laptop", caption: "Estate files are worked through line by line." },
+  { src: "/images/firm/director-desk.jpg", alt: "The Director at his desk", caption: "The Director supervises every legal file and estate account.", tall: true },
+  { src: "/images/firm/on-the-phone.jpg", alt: "Estate administrator Xolelwa Ngwane on the phone at her desk", caption: "A real person answers, and calls you back.", tall: true },
+  { src: "/images/firm/boardroom-2.jpg", alt: "Team members reviewing papers in a meeting", caption: "Every file has a named person working on it." },
+];
+
+export const firstVisit = [
+  { title: "You're welcomed at reception", text: "Tell us your name and why you've come. Bring your ID and any documents you have, such as a death certificate, contract, lease or court papers.", photo: "/images/firm/reception-phumudzo.jpg" },
+  { title: "A private consultation", text: "We sit down with you in a consultation room, listen to what happened and explain your options in plain language.", photo: "/images/firm/consultation-2.jpg" },
+  { title: "Your file gets a team", text: "Your matter is given to the right person, from the estate team to the candidate attorneys, under the Director's supervision.", photo: "/images/firm/boardroom-2.jpg" },
+  { title: "You're kept up to date", text: "We let you know when something happens on your file, including on WhatsApp. Need an update? Just ask.", photo: "/images/firm/director-standing.jpg" },
+];

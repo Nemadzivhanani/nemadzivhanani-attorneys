@@ -45,6 +45,7 @@ export default function Footer() {
             <h4>The firm</h4>
             <ul>
               <li><Link href="/about">About us</Link></li>
+              <li><Link href="/the-firm">Inside the firm</Link></li>
               <li><Link href="/team">Our team</Link></li>
               <li><Link href="/existing-clients">Existing clients</Link></li>
               <li><Link href="/legal#privacy">Privacy &amp; POPIA</Link></li>
