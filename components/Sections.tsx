@@ -74,7 +74,7 @@ export function OfficeCards() {
               </span>
             ))}
           </address>
-          <p className="muted" style={{ fontSize: ".92rem" }}>{o.about}</p>
+          <p className="muted office-about">{o.about}</p>
           <OfficeHours />
           <div className="row">
             <a className="btn btn-solid" href={`tel:${o.phone}`} aria-label={`Call the ${o.name} on ${o.phoneDisplay}`}>

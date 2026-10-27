@@ -321,9 +321,9 @@ export const officePhotos: Photo[] = [
   { src: "/images/firm/boardroom.jpg", alt: "The team in a meeting around the boardroom table", caption: "Matters are discussed as a team, with the Director at the table." },
   { src: "/images/firm/glass-door.jpg", alt: "Glass office door with the firm's logo", caption: "Private consultation rooms for confidential conversations.", tall: true },
   { src: "/images/firm/consultation.jpg", alt: "Two team members in a consultation with documents and a laptop", caption: "Estate files are worked through line by line." },
+  { src: "/images/firm/boardroom-2.jpg", alt: "Team members reviewing papers in a meeting", caption: "Every file has a named person working on it." },
   { src: "/images/firm/director-desk.jpg", alt: "The Director at his desk", caption: "The Director supervises every legal file and estate account.", tall: true },
   { src: "/images/firm/on-the-phone.jpg", alt: "Estate administrator Xolelwa Ngwane on the phone at her desk", caption: "A real person answers, and calls you back.", tall: true },
-  { src: "/images/firm/boardroom-2.jpg", alt: "Team members reviewing papers in a meeting", caption: "Every file has a named person working on it." },
 ];
 
 export const firstVisit = [

@@ -53,8 +53,8 @@ export default function Home() {
                 Meet the Director <span className="arrow" aria-hidden="true">→</span>
               </Link>
             </div>
-            <div style={{ position: "relative", minHeight: 260 }}>
-              <Image src="/images/firm/director-logo.jpg" alt="Director Rabelani Nemadzivhanani at the firm's reception" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 8%" }} />
+            <div style={{ position: "relative", minHeight: 260, aspectRatio: "4 / 5" }}>
+              <Image src="/images/firm/director-logo.jpg" alt="Director Rabelani Nemadzivhanani at the firm's reception" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 0%" }} />
             </div>
             <div className="deep" style={{ padding: "24px 20px" }}>
               <div className="lbl" style={{ color: "var(--gold)" }}>Already a client?</div>
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Services */}
       <section className="sec">
         <div className="wrap split">
-          <div style={{ position: "relative", minHeight: 240 }}>
+          <div style={{ position: "relative", aspectRatio: "16 / 9", alignSelf: "start" }}>
             <Image src={lead.image!} alt="" fill sizes="(min-width: 760px) 50vw, 100vw" style={{ objectFit: "cover" }} />
           </div>
           <div>

@@ -158,7 +158,8 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 .person h3 { font-size: 1.1rem; margin-bottom: 2px; }
 .person .role { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: #9a7b2f; margin-bottom: 8px; display: block; }
 .person p { font-size: .92rem; color: var(--muted); }
-.group-photo { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+/* Wide photos sit inside the page width at their own 16:9 shape, so nobody is cropped. */
+.group-photo, .photo-band { position: relative; width: calc(100% - 36px); max-width: calc(var(--wrap) - 36px); margin: 32px auto 0; aspect-ratio: 16 / 9; }
 .group-photo img { object-fit: cover; }
 
 /* trust */
@@ -172,6 +173,8 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 .office { background: #fff; border: 1.5px solid var(--navy); padding: 18px; display: flex; flex-direction: column; gap: 4px; }
 .office h3 { font-size: 1.2rem; }
 .office address { font-style: normal; color: #444; }
+/* The note grows so hours and buttons line up across all three cards. */
+.office-about { font-size: .92rem; flex: 1; }
 .office .row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
 .office .row .btn { white-space: nowrap; flex: 1 1 150px; margin: 0; padding: 10px 14px; font-size: .95rem; }
 
@@ -257,7 +260,6 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
   .btn:hover { transform: none; }
 }
 
-@media (min-width: 1080px) { .group-photo { aspect-ratio: auto; height: 560px; } .group-photo img { object-position: center 30%; } }
 
 /* office hours */
 .hours { margin-top: 10px; border-top: 1px solid #e3dfcf; padding-top: 10px; font-size: .9rem; display: grid; gap: 4px; }
@@ -268,27 +270,24 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 /* inside the firm: gallery + first visit */
 .gallery { columns: 1; column-gap: 16px; }
 .gallery figure { margin: 0 0 16px; background: var(--cream); break-inside: avoid; }
-.g-pic { position: relative; aspect-ratio: 16 / 10; }
-.gallery .tall .g-pic { aspect-ratio: 4 / 5; }
+.g-pic { position: relative; aspect-ratio: 16 / 9; }
+.gallery .tall .g-pic { aspect-ratio: 9 / 16; }
 .g-pic img, .v-pic img { object-fit: cover; }
 .gallery figcaption { padding: 12px 14px; font-size: .92rem; color: var(--muted); border-top: 3px solid var(--gold); }
 .visit { list-style: none; display: grid; gap: 22px; }
 .visit li { background: #fff; }
-.v-pic { position: relative; aspect-ratio: 4 / 3; }
+.v-pic { position: relative; aspect-ratio: 16 / 9; }
 .v-num { position: absolute; left: 0; bottom: 0; width: 44px; height: 44px; background: var(--navy); color: var(--gold); font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
 .visit h3 { font-size: 1.15rem; padding: 14px 16px 4px; }
 .visit p { font-size: .92rem; color: var(--muted); padding: 0 16px 16px; }
-.photo-band { position: relative; width: 100%; height: 300px; }
-.photo-band img { object-fit: cover; object-position: center 35%; }
+.photo-band img { object-fit: cover; }
 @media (min-width: 760px) {
   .gallery { columns: 2; }
   .visit { grid-template-columns: 1fr 1fr; }
-  .photo-band { height: 440px; }
 }
 @media (min-width: 1080px) {
   .gallery { columns: 3; }
   .visit { grid-template-columns: repeat(4, 1fr); }
-  .photo-band { height: 640px; }
 }
 
 /* review form */
