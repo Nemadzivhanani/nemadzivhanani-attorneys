@@ -9,6 +9,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Serve photos sharper than the default 75 (any quality prop is coerced to this).
+  images: { qualities: [90] },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

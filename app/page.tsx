@@ -34,7 +34,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="photo-band">
+      <div className="photo-band top">
         <Image src="/team/team-group.jpg" alt="Director Rabelani Nemadzivhanani with the Nemadzivhanani R Inc team" fill sizes="100vw" priority />
       </div>
 

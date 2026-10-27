@@ -28,8 +28,8 @@ export default function About() {
       {/* Director */}
       <section className="sec white">
         <div className="wrap split">
-          <div style={{ position: "relative", minHeight: 420 }}>
-            <Image src="/images/firm/director-logo.jpg" alt={`${director.name}, ${director.role}, at the firm's reception`} fill sizes="(min-width: 760px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 20%" }} />
+          <div style={{ position: "relative", aspectRatio: "4 / 5" }}>
+            <Image src="/images/firm/director-logo.jpg" alt={`${director.name}, ${director.role}, at the firm's reception`} fill sizes="(min-width: 760px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 0%" }} />
           </div>
           <div>
             <div className="lbl">Founder &amp; Director</div>
