@@ -287,3 +287,16 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
   .visit { grid-template-columns: repeat(4, 1fr); }
   .photo-band { height: 560px; }
 }
+
+/* review form */
+.stars { border: 0; }
+.stars legend { font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+.stars-row { display: inline-flex; flex-direction: row-reverse; gap: 4px; }
+.stars-row input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.stars-row label { font-size: 2.4rem; line-height: 1; color: #d8d2c0; cursor: pointer; padding: 2px; }
+.stars-row span:has(input:checked) ~ span label, .stars-row span:has(input:checked) label { color: var(--gold); }
+.stars-row span:hover label, .stars-row span:hover ~ span label { color: var(--gold); }
+.stars-row input:focus-visible + label { outline: 3px solid var(--gold); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.btn:disabled { opacity: .6; cursor: wait; }
