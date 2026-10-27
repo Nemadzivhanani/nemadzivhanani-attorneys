@@ -57,7 +57,7 @@ export default function Home() {
               </Link>
             </div>
             <div style={{ position: "relative", minHeight: 260 }}>
-              <Image src="/images/firm/director-logo.jpg" alt="Director Rabelani Nemadzivhanani at the firm's reception" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 25%" }} />
+              <Image src="/images/firm/director-logo.jpg" alt="Director Rabelani Nemadzivhanani at the firm's reception" fill sizes="(min-width: 760px) 33vw, 100vw" style={{ objectFit: "cover", objectPosition: "center 8%" }} />
             </div>
             <div className="deep" style={{ padding: "24px 20px" }}>
               <div className="lbl" style={{ color: "var(--gold)" }}>Already a client?</div>

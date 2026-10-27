@@ -87,7 +87,7 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 .brand b { font-weight: 900; font-size: .82rem; line-height: 1.1; letter-spacing: .03em; white-space: nowrap; }
 .brand .ri { display: block; font-size: .62rem; letter-spacing: .12em; color: #fff; }
 .brand small { display: block; font-size: .62rem; letter-spacing: .14em; color: var(--gold); font-weight: 700; }
-.hdr-r { display: flex; align-items: center; gap: 10px; }
+.hdr-r { display: flex; align-items: center; gap: 8px; flex: none; }
 .pill { background: var(--gold); color: var(--navy); font-weight: 700; font-size: .78rem; padding: 9px 10px; text-decoration: none; white-space: nowrap; }
 .burger { width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .burger span, .burger span::before, .burger span::after { display: block; width: 22px; height: 2px; background: #fff; position: relative; content: ""; transition: transform .2s ease; }
@@ -149,8 +149,8 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 
 /* team */
 .team { display: grid; grid-template-columns: 1fr; gap: 18px; }
-.person { background: #fff; display: grid; grid-template-columns: 112px 1fr; gap: 0; align-items: stretch; }
-.person .pic { position: relative; min-height: 150px; background: #e6e8ee; }
+.person { background: #fff; display: grid; grid-template-columns: 128px 1fr; gap: 0; align-items: start; }
+.person .pic { position: relative; aspect-ratio: 4 / 5; background: #e6e8ee; }
 .person .pic img { object-fit: cover; object-position: top center; }
 .person .body { padding: 14px 16px; border-top: 3px solid var(--gold); }
 .person h3 { font-size: 1.1rem; margin-bottom: 2px; }
@@ -209,6 +209,14 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.01em; }
 /* split helpers */
 .split { display: grid; gap: 24px; }
 .stack > * + * { margin-top: 14px; }
+
+@media (max-width: 479px) {
+  .hdr .wrap { padding: 0 12px; }
+  .brand { gap: 7px; }
+  .brand b { font-size: .72rem; letter-spacing: 0; }
+  .brand small { font-size: .56rem; letter-spacing: .08em; }
+  .pill { font-size: .72rem; padding: 8px; }
+}
 
 @media (min-width: 760px) {
   .wrap { padding: 0 32px; }
