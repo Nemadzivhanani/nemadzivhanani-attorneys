@@ -18,13 +18,14 @@ export default function Home() {
               It&apos;s your right.
             </h1>
             <div className="punch">Talk to an attorney today.</div>
-          </div>
-          <div>
             <p className="lead">
               Deceased estates, litigation, business contracts, family matters and property. A director-led team with offices in
               Johannesburg CBD, Roodepoort and Springs.
             </p>
             <PrimaryCtas />
+          </div>
+          <div className="hero-photo">
+            <Image src="/team/team-hero.jpg" alt="Director Rabelani Nemadzivhanani with the Nemadzivhanani R Inc team" fill sizes="(min-width: 760px) 50vw, 100vw" priority />
           </div>
         </div>
         <div className="wrap">
@@ -33,10 +34,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      <div className="photo-band top">
-        <Image src="/team/team-group.jpg" alt="Director Rabelani Nemadzivhanani with the Nemadzivhanani R Inc team" fill sizes="100vw" priority />
-      </div>
 
       {/* Why us */}
       <section className="sec">
